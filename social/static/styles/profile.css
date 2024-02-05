@@ -1,0 +1,83 @@
+body {
+    padding: none;
+    margin: none;
+}
+.name {
+    align-self: flex-start;
+    font-size: 6rem;
+    font-weight: 700;
+    /* margin-bottom: 0.5rem; */
+    letter-spacing: -0.1rem;
+    margin-top: 1.5rem;
+}
+
+
+.pfp-select { 
+    align-self: flex-end;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 1000000000rem;
+    margin-top: 2.5rem;
+}
+
+.user-data {
+    position: absolute;
+    top: 10vh;
+    left: 5vw;
+
+    padding: 2rem;
+    box-sizing: border-box;
+
+    width: 90vw;
+    height: 40vh;
+
+    border-radius: 1rem;
+    background-color: var(--background-alt);
+
+    display: flex;
+    justify-content: space-between;
+    /* align-content: flex-end; */
+}
+
+.bio {
+    position: absolute;
+    top: 55vh;
+    left: 5vw;
+
+    padding: 1rem;
+    box-sizing: border-box;
+
+    width: 55vw;
+    height: 40vh;
+
+    border-radius: 1rem;
+    background-color: var(--background-alt);
+
+}
+
+.bio-heading {
+    font-size: 2.5rem;
+    font-weight: 500;
+
+}
+
+.stats {
+    position: absolute;
+    top: 55vh;
+    right: 5vw;
+
+    padding: 1rem;
+    box-sizing: border-box;
+
+    width: 33vw;
+    height: 40vh;
+
+    border-radius: 1rem;
+    background-color: var(--background-alt);
+}
+
+.stats-heading {
+    font-size: 2.5rem;
+    font-weight: 500;
+
+}

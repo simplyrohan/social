@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/styles/base.css">
+    <link rel="stylesheet" href="/static/styles/profile.css">
+</head>
+
+<body>
+    <div class="user-data">
+        <h1 class="name">{{profile['username']}}</h1>
+        <!-- <h2 class="username">{{profile['username']}}</h2> -->
+
+        <form action="/profile/{{profile['username']}}" method="post" enctype=multipart/form-data
+            style="display: none;">
+            <input type="file" name="pfp" id="pfp" accept=".jpeg,.jpg,.png" onchange="this.form.submit();">
+            <input type="submit" value="submit">
+        </form>
+        <label {% if editable %} for="pfp" {% endif %}>
+            <img src="/static/generated/{{profile['picture']}}" class="pfp-select">
+        </label>
+    </div>
+    <div class="bio">
+        <h2 class="bio-heading">Bio</h2>
+        <p>{{profile['bio']}}</p>
+    </div>
+    <div class="stats">
+        <h2 class="stats-heading">Stats</h2>
+
+    </div>
+
+</body>
+
+</html>

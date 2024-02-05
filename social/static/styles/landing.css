@@ -1,0 +1,25 @@
+body {}
+
+.big-heading {
+    background-image: radial-gradient(circle 35vh at center, rgba(var(--primary-iso), 0.45), transparent);
+
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.get-started {
+    border: 2px solid transparent;
+    padding: 0.7rem;
+    border-image: linear-gradient(-45deg, rgba((--primary-iso), 0.5), rgba(var(--accent-iso), 0.5)) 2;
+    transition: 0.2s ease-in-out;
+    background-color: transparent;
+}
+
+.get-started:hover {
+    background-color: var(--primary);
+    
+}

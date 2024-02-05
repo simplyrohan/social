@@ -53,7 +53,7 @@ def signup():
         # print(username, password)
 
         uid = uuid.uuid4().hex
-        db["users"][uid] = {"id": uid, "username": username, "password": password}
+        db["users"][uid] = {"id": uid, "username": username, "password": password, "picture": "0.svg"}
 
         flask.session["id"] = uid
         return flask.redirect(flask.url_for("dashboard"))

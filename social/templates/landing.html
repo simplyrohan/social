@@ -1,16 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Network</title>
     <link rel="stylesheet" href="/static/styles/base.css">
+    <link rel="stylesheet" href="/static/styles/landing.css">
 </head>
+
 <body>
-    <h1>Eeller!</h1>
-    <h2>Poopy! ;)</h2>
-    <a href="/auth/signup">
-    <button>Find Out Why</button>
-    </a>
+    <div class="big-heading">
+        <h1>Social Network</h1>
+        <div class="get-started" onclick="window.location.replace('/auth/signup')">Get Started</div>
+
+    </div>
+
+    <script>
+        for (let element of document.getElementsByClassName("fill")) {
+            let text = element.innerText;
+            element.innerHTML = "";
+            let text_element = document.createElement("span");
+            text_element.innerHTML = text;
+            element.appendChild(text_element);
+
+            let ink = document.createElement("span");
+            ink.className = "ink";
+            element.appendChild(ink);
+
+            element.addEventListener("mouseenter", (e) => {
+                let x = e.clientX - element.getBoundingClientRect().left;
+                let y = e.clientY - element.getBoundingClientRect().top;
+                ink.style.left = x + "px";
+                ink.style.top = y + "px";
+                ink.style.animation = "fill 0.7s ease-in-out forwards";
+            });
+            element.addEventListener("mouseleave", (e) => {
+                let x = e.clientX - element.getBoundingClientRect().left;
+                let y = e.clientY - element.getBoundingClientRect().top;
+                ink.style.left = x + "px";
+                ink.style.top = y + "px";
+                ink.style.animation = "unfill 1.2s ease-in-out forwards";
+            });
+        }
+    </script>
 </body>
+
 </html>
